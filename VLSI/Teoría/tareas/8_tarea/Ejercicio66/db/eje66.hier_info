@@ -1,0 +1,62 @@
+|top
+clk => relojlento:w1.clkl
+sq1 <= ffjk1:w2.sq1
+sq0 <= ffjk1:w2.sq0
+
+
+|top|relojlento:w1
+clkl => led~reg0.CLK
+clkl => conteo[0].CLK
+clkl => conteo[1].CLK
+clkl => conteo[2].CLK
+clkl => conteo[3].CLK
+clkl => conteo[4].CLK
+clkl => conteo[5].CLK
+clkl => conteo[6].CLK
+clkl => conteo[7].CLK
+clkl => conteo[8].CLK
+clkl => conteo[9].CLK
+clkl => conteo[10].CLK
+clkl => conteo[11].CLK
+clkl => conteo[12].CLK
+clkl => conteo[13].CLK
+clkl => conteo[14].CLK
+clkl => conteo[15].CLK
+clkl => conteo[16].CLK
+clkl => conteo[17].CLK
+clkl => conteo[18].CLK
+clkl => conteo[19].CLK
+clkl => conteo[20].CLK
+clkl => conteo[21].CLK
+clkl => conteo[22].CLK
+clkl => conteo[23].CLK
+clkl => conteo[24].CLK
+clkl => conteo[25].CLK
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|ffjk1:w2
+clk => ffjk:u1.clk
+clk => ffjk:u2.clk
+sq1 <= sq1.DB_MAX_OUTPUT_PORT_TYPE
+sq0 <= sq0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|ffjk1:w2|FFJK:u1
+clk => notq~reg0.CLK
+clk => q~reg0.CLK
+j => q.IN1
+k => q.IN1
+q <> q~reg0
+notq <> notq~reg0
+
+
+|top|ffjk1:w2|FFJK:u2
+clk => notq~reg0.CLK
+clk => q~reg0.CLK
+j => q.IN1
+k => q.IN1
+q <> q~reg0
+notq <> notq~reg0
+
+

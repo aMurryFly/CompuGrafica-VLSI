@@ -1,0 +1,19 @@
+|miromAMV
+bus_dir[0] => mem_rom.RADDR
+bus_dir[1] => mem_rom.RADDR1
+cs => bus_data[0].OE
+cs => bus_data[1].OE
+cs => bus_data[2].OE
+cs => bus_data[3].OE
+cs => bus_data[4].OE
+cs => bus_data[5].OE
+cs => bus_data[6].OE
+bus_data[0] << bus_data[0].DB_MAX_OUTPUT_PORT_TYPE
+bus_data[1] << bus_data[1].DB_MAX_OUTPUT_PORT_TYPE
+bus_data[2] << bus_data[2].DB_MAX_OUTPUT_PORT_TYPE
+bus_data[3] << bus_data[3].DB_MAX_OUTPUT_PORT_TYPE
+bus_data[4] << bus_data[4].DB_MAX_OUTPUT_PORT_TYPE
+bus_data[5] << bus_data[5].DB_MAX_OUTPUT_PORT_TYPE
+bus_data[6] << bus_data[6].DB_MAX_OUTPUT_PORT_TYPE
+
+

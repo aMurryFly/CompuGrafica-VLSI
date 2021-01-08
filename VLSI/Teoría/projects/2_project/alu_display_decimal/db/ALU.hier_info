@@ -1,0 +1,208 @@
+|topalu
+selu[0] => topua:u1.sel[0]
+selu[0] => compuertas:u2.SEL[0]
+selu[1] => topua:u1.sel[1]
+selu[1] => compuertas:u2.SEL[1]
+selu[2] => muxt:u3.SEL
+a[0] => topua:u1.a[0]
+a[0] => compuertas:u2.a[0]
+a[1] => topua:u1.a[1]
+a[1] => compuertas:u2.a[1]
+a[2] => topua:u1.a[2]
+a[2] => compuertas:u2.a[2]
+b[0] => topua:u1.b[0]
+b[0] => compuertas:u2.b[0]
+b[1] => topua:u1.b[1]
+b[1] => compuertas:u2.b[1]
+b[2] => topua:u1.b[2]
+b[2] => compuertas:u2.b[2]
+cin => topua:u1.cin
+sal[0] << muxt:u3.sal[0]
+sal[1] << muxt:u3.sal[1]
+sal[2] << muxt:u3.sal[2]
+led1[0] << topua:u1.led1[0]
+led1[1] << topua:u1.led1[1]
+led1[2] << topua:u1.led1[2]
+led1[3] << topua:u1.led1[3]
+led1[4] << topua:u1.led1[4]
+led1[5] << topua:u1.led1[5]
+led1[6] << topua:u1.led1[6]
+led2[0] << topua:u1.led2[0]
+led2[1] << topua:u1.led2[1]
+led2[2] << topua:u1.led2[2]
+led2[3] << topua:u1.led2[3]
+led2[4] << topua:u1.led2[4]
+led2[5] << topua:u1.led2[5]
+led2[6] << topua:u1.led2[6]
+cout <> topua:u1.cout
+
+
+|topalu|topua:u1
+sel[0] => Mux0.IN5
+sel[0] => mux4x1:u1.SEL[0]
+sel[1] => Mux0.IN4
+sel[1] => mux4x1:u1.SEL[1]
+a[0] => sumbit:u2.a[0]
+a[1] => sumbit:u2.a[1]
+a[2] => sumbit:u2.a[2]
+b[0] => mux4x1:u1.b[0]
+b[1] => mux4x1:u1.b[1]
+b[2] => mux4x1:u1.b[2]
+cin => sumbit:u2.cin
+sal[0] <> sal[0]
+sal[1] <> sal[1]
+sal[2] <> sal[2]
+cout <> cout
+led1[0] <= bcd7seg:u3.led1[0]
+led1[1] <= bcd7seg:u3.led1[1]
+led1[2] <= bcd7seg:u3.led1[2]
+led1[3] <= bcd7seg:u3.led1[3]
+led1[4] <= bcd7seg:u3.led1[4]
+led1[5] <= bcd7seg:u3.led1[5]
+led1[6] <= bcd7seg:u3.led1[6]
+led2[0] <= bcd7seg:u3.led2[0]
+led2[1] <= bcd7seg:u3.led2[1]
+led2[2] <= bcd7seg:u3.led2[2]
+led2[3] <= bcd7seg:u3.led2[3]
+led2[4] <= bcd7seg:u3.led2[4]
+led2[5] <= bcd7seg:u3.led2[5]
+led2[6] <= bcd7seg:u3.led2[6]
+
+
+|topalu|topua:u1|mux4x1:u1
+SEL[0] => Mux0.IN4
+SEL[0] => Mux1.IN4
+SEL[0] => Mux2.IN4
+SEL[1] => Mux0.IN3
+SEL[1] => Mux1.IN3
+SEL[1] => Mux2.IN3
+b[0] => Mux2.IN5
+b[0] => Mux2.IN2
+b[1] => Mux1.IN5
+b[1] => Mux1.IN2
+b[2] => Mux0.IN5
+b[2] => Mux0.IN2
+sal[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topalu|topua:u1|sumbit:u2
+a[0] => Add0.IN3
+a[1] => Add0.IN2
+a[2] => Add0.IN1
+b2[0] => Add0.IN6
+b2[1] => Add0.IN5
+b2[2] => Add0.IN4
+cin => Add1.IN8
+sal[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topalu|topua:u1|bcd7seg:u3
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[1] => Mux7.IN10
+bcd[1] => Mux8.IN10
+bcd[1] => Mux9.IN10
+bcd[1] => Mux10.IN10
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[2] => Mux7.IN9
+bcd[2] => Mux8.IN9
+bcd[2] => Mux9.IN9
+bcd[2] => Mux10.IN9
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+bcd[3] => Mux7.IN8
+bcd[3] => Mux8.IN8
+bcd[3] => Mux9.IN8
+bcd[3] => Mux10.IN8
+led1[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+led1[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+led1[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+led1[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+led1[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+led1[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+led1[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+led2[0] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+led2[1] <= <GND>
+led2[2] <= <GND>
+led2[3] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+led2[4] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+led2[5] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+led2[6] <= <VCC>
+
+
+|topalu|compuertas:u2
+SEL[0] => Mux0.IN1
+SEL[0] => Mux1.IN1
+SEL[0] => Mux2.IN1
+SEL[1] => Mux0.IN0
+SEL[1] => Mux1.IN0
+SEL[1] => Mux2.IN0
+a[0] => cand[0].IN0
+a[0] => cor[0].IN0
+a[0] => cxor[0].IN0
+a[0] => Mux2.IN5
+a[1] => cand[1].IN0
+a[1] => cor[1].IN0
+a[1] => cxor[1].IN0
+a[1] => Mux1.IN5
+a[2] => cand[2].IN0
+a[2] => cor[2].IN0
+a[2] => cxor[2].IN0
+a[2] => Mux0.IN5
+b[0] => cand[0].IN1
+b[0] => cor[0].IN1
+b[0] => cxor[0].IN1
+b[1] => cand[1].IN1
+b[1] => cor[1].IN1
+b[1] => cxor[1].IN1
+b[2] => cand[2].IN1
+b[2] => cor[2].IN1
+b[2] => cxor[2].IN1
+F[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topalu|muxt:u3
+SEL => sal.OUTPUTSELECT
+SEL => sal.OUTPUTSELECT
+SEL => sal.OUTPUTSELECT
+a[0] => sal.DATAB
+a[1] => sal.DATAB
+a[2] => sal.DATAB
+b[0] => sal.DATAA
+b[1] => sal.DATAA
+b[2] => sal.DATAA
+sal[0] <= sal.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= sal.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= sal.DB_MAX_OUTPUT_PORT_TYPE
+
+

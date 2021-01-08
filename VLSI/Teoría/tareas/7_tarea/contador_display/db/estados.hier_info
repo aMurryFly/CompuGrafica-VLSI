@@ -1,0 +1,144 @@
+|topestados
+clk => relojlento:u0.clkl
+reset => estados:u1.reset
+SalMoore[0] << estados:u1.SalMoore[0]
+SalMoore[1] << estados:u1.SalMoore[1]
+SalMoore[2] << estados:u1.SalMoore[2]
+SalMoore[3] << estados:u1.SalMoore[3]
+dsp1[0] << bcd7seg:u2.led[0]
+dsp1[1] << bcd7seg:u2.led[1]
+dsp1[2] << bcd7seg:u2.led[2]
+dsp1[3] << bcd7seg:u2.led[3]
+dsp1[4] << bcd7seg:u2.led[4]
+dsp1[5] << bcd7seg:u2.led[5]
+dsp1[6] << bcd7seg:u2.led[6]
+dsp2[0] << bcd7seg:u3.led[0]
+dsp2[1] << bcd7seg:u3.led[1]
+dsp2[2] << bcd7seg:u3.led[2]
+dsp2[3] << bcd7seg:u3.led[3]
+dsp2[4] << bcd7seg:u3.led[4]
+dsp2[5] << bcd7seg:u3.led[5]
+dsp2[6] << bcd7seg:u3.led[6]
+
+
+|topestados|relojlento:u0
+clkl => led~reg0.CLK
+clkl => conteo[0].CLK
+clkl => conteo[1].CLK
+clkl => conteo[2].CLK
+clkl => conteo[3].CLK
+clkl => conteo[4].CLK
+clkl => conteo[5].CLK
+clkl => conteo[6].CLK
+clkl => conteo[7].CLK
+clkl => conteo[8].CLK
+clkl => conteo[9].CLK
+clkl => conteo[10].CLK
+clkl => conteo[11].CLK
+clkl => conteo[12].CLK
+clkl => conteo[13].CLK
+clkl => conteo[14].CLK
+clkl => conteo[15].CLK
+clkl => conteo[16].CLK
+clkl => conteo[17].CLK
+clkl => conteo[18].CLK
+clkl => conteo[19].CLK
+clkl => conteo[20].CLK
+clkl => conteo[21].CLK
+clkl => conteo[22].CLK
+clkl => conteo[23].CLK
+clkl => conteo[24].CLK
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topestados|estados:u1
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+clk => present_state[3].CLK
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+SalMoore[0] <= present_state[0].DB_MAX_OUTPUT_PORT_TYPE
+SalMoore[1] <= present_state[1].DB_MAX_OUTPUT_PORT_TYPE
+SalMoore[2] <= present_state[2].DB_MAX_OUTPUT_PORT_TYPE
+SalMoore[3] <= present_state[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topestados|bcd7seg:u2
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+led[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topestados|bcd7seg:u3
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+led[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

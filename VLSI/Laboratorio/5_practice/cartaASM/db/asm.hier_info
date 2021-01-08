@@ -1,0 +1,72 @@
+|cartaASM
+clk => relojlento:u1.clk1
+reset => estados:u2.reset
+x => estados:u2.x
+y => estados:u2.y
+var1 << estados:u2.var1
+var2 << estados:u2.var2
+var3 << estados:u2.var3
+var4 << estados:u2.var4
+
+
+|cartaASM|relojlento:u1
+clk1 => led~reg0.CLK
+clk1 => conteo[0].CLK
+clk1 => conteo[1].CLK
+clk1 => conteo[2].CLK
+clk1 => conteo[3].CLK
+clk1 => conteo[4].CLK
+clk1 => conteo[5].CLK
+clk1 => conteo[6].CLK
+clk1 => conteo[7].CLK
+clk1 => conteo[8].CLK
+clk1 => conteo[9].CLK
+clk1 => conteo[10].CLK
+clk1 => conteo[11].CLK
+clk1 => conteo[12].CLK
+clk1 => conteo[13].CLK
+clk1 => conteo[14].CLK
+clk1 => conteo[15].CLK
+clk1 => conteo[16].CLK
+clk1 => conteo[17].CLK
+clk1 => conteo[18].CLK
+clk1 => conteo[19].CLK
+clk1 => conteo[20].CLK
+clk1 => conteo[21].CLK
+clk1 => conteo[22].CLK
+clk1 => conteo[23].CLK
+clk1 => conteo[24].CLK
+clk1 => conteo[25].CLK
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cartaASM|estados:u2
+clk => present_State[0].CLK
+clk => present_State[1].CLK
+clk => present_State[2].CLK
+clk => present_State[3].CLK
+reset => present_State.OUTPUTSELECT
+reset => present_State.OUTPUTSELECT
+reset => present_State.OUTPUTSELECT
+reset => present_State.OUTPUTSELECT
+x => Mux2.IN14
+x => Mux5.IN15
+x => Mux3.IN14
+y => Mux0.IN15
+y => Mux2.IN15
+y => Mux4.IN15
+y => Mux7.IN15
+y => Mux6.IN15
+y => Mux7.IN14
+y => Mux2.IN13
+y => Mux3.IN15
+var1 <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+var2 <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+var3 <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+var4 <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+SalMoore[0] <> SalMoore[0]
+SalMoore[1] <> SalMoore[1]
+SalMoore[2] <> SalMoore[2]
+SalMoore[3] <> SalMoore[3]
+
+

@@ -1,0 +1,66 @@
+|ProyectoUno
+a[0] => sum:U2.a[0]
+a[1] => sum:U2.a[1]
+a[2] => sum:U2.a[2]
+b[0] => mux4x1:U1.b[0]
+b[1] => mux4x1:U1.b[1]
+b[2] => mux4x1:U1.b[2]
+s[0] => Mux0.IN2
+s[0] => Mux1.IN2
+s[0] => mux4x1:U1.sel[0]
+s[1] => Mux0.IN1
+s[1] => Mux1.IN1
+s[1] => mux4x1:U1.sel[1]
+cin => sum:U2.cin
+sal[0] << sum:U2.sal[0]
+sal[1] << sum:U2.sal[1]
+sal[2] << sum:U2.sal[2]
+sal[3] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+dsp1[0] << Mux8.DB_MAX_OUTPUT_PORT_TYPE
+dsp1[1] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
+dsp1[2] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+dsp1[3] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+dsp1[4] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+dsp1[5] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dsp1[6] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dsp2[0] << <VCC>
+dsp2[1] << Mux12.DB_MAX_OUTPUT_PORT_TYPE
+dsp2[2] << Mux11.DB_MAX_OUTPUT_PORT_TYPE
+dsp2[3] << Mux10.DB_MAX_OUTPUT_PORT_TYPE
+dsp2[4] << <GND>
+dsp2[5] << <GND>
+dsp2[6] << Mux9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProyectoUno|Mux4x1:U1
+sel[0] => Mux0.IN4
+sel[0] => Mux1.IN4
+sel[0] => Mux2.IN4
+sel[1] => Mux0.IN3
+sel[1] => Mux1.IN3
+sel[1] => Mux2.IN3
+b[0] => Mux2.IN5
+b[0] => Mux2.IN2
+b[1] => Mux1.IN5
+b[1] => Mux1.IN2
+b[2] => Mux0.IN5
+b[2] => Mux0.IN2
+sal[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProyectoUno|Sum:U2
+a[0] => Add0.IN3
+a[1] => Add0.IN2
+a[2] => Add0.IN1
+b[0] => Add0.IN6
+b[1] => Add0.IN5
+b[2] => Add0.IN4
+cin => Add1.IN8
+sal[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+

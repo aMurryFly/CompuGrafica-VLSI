@@ -1,0 +1,80 @@
+|topua
+sel[0] => mux4x1:u1.SEL[0]
+sel[1] => mux4x1:u1.SEL[1]
+a[0] => sumbit:u2.a[0]
+a[1] => sumbit:u2.a[1]
+a[2] => sumbit:u2.a[2]
+b[0] => mux4x1:u1.b[0]
+b[1] => mux4x1:u1.b[1]
+b[2] => mux4x1:u1.b[2]
+cin => sumbit:u2.cin
+sal[0] <> sal[0]
+sal[1] <> sal[1]
+sal[2] <> sal[2]
+cout <> cout
+ds1[0] << ds1[0].DB_MAX_OUTPUT_PORT_TYPE
+ds1[1] << <GND>
+ds1[2] << <GND>
+ds1[3] << ds1[3].DB_MAX_OUTPUT_PORT_TYPE
+ds1[4] << ds1[4].DB_MAX_OUTPUT_PORT_TYPE
+ds1[5] << ds1[5].DB_MAX_OUTPUT_PORT_TYPE
+ds1[6] << <VCC>
+ds1[7] << <VCC>
+ds2[0] << ds2[0].DB_MAX_OUTPUT_PORT_TYPE
+ds2[1] << <GND>
+ds2[2] << <GND>
+ds2[3] << ds2[3].DB_MAX_OUTPUT_PORT_TYPE
+ds2[4] << ds2[4].DB_MAX_OUTPUT_PORT_TYPE
+ds2[5] << ds2[5].DB_MAX_OUTPUT_PORT_TYPE
+ds2[6] << <VCC>
+ds2[7] << <VCC>
+ds3[0] << ds3[0].DB_MAX_OUTPUT_PORT_TYPE
+ds3[1] << <GND>
+ds3[2] << <GND>
+ds3[3] << ds3[3].DB_MAX_OUTPUT_PORT_TYPE
+ds3[4] << ds3[4].DB_MAX_OUTPUT_PORT_TYPE
+ds3[5] << ds3[5].DB_MAX_OUTPUT_PORT_TYPE
+ds3[6] << <VCC>
+ds3[7] << <VCC>
+ds4[0] << ds4[0].DB_MAX_OUTPUT_PORT_TYPE
+ds4[1] << <GND>
+ds4[2] << <GND>
+ds4[3] << ds4[3].DB_MAX_OUTPUT_PORT_TYPE
+ds4[4] << ds4[4].DB_MAX_OUTPUT_PORT_TYPE
+ds4[5] << ds4[5].DB_MAX_OUTPUT_PORT_TYPE
+ds4[6] << <VCC>
+ds4[7] << <VCC>
+
+
+|topua|mux4x1:u1
+SEL[0] => Mux0.IN4
+SEL[0] => Mux1.IN4
+SEL[0] => Mux2.IN4
+SEL[1] => Mux0.IN3
+SEL[1] => Mux1.IN3
+SEL[1] => Mux2.IN3
+b[0] => Mux2.IN5
+b[0] => Mux2.IN2
+b[1] => Mux1.IN5
+b[1] => Mux1.IN2
+b[2] => Mux0.IN5
+b[2] => Mux0.IN2
+sal[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|topua|sumbit:u2
+a[0] => Add0.IN3
+a[1] => Add0.IN2
+a[2] => Add0.IN1
+b2[0] => Add0.IN6
+b2[1] => Add0.IN5
+b2[2] => Add0.IN4
+cin => Add1.IN8
+sal[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+

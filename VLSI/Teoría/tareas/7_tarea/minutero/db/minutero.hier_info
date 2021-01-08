@@ -1,0 +1,156 @@
+|minutero
+clk => clk1hz:divFre.clkl
+reset => comb.IN1
+reset => count0to9:cont0.reset
+dis7s1[0] << bcd7seg:seg1.led[0]
+dis7s1[1] << bcd7seg:seg1.led[1]
+dis7s1[2] << bcd7seg:seg1.led[2]
+dis7s1[3] << bcd7seg:seg1.led[3]
+dis7s1[4] << bcd7seg:seg1.led[4]
+dis7s1[5] << bcd7seg:seg1.led[5]
+dis7s1[6] << bcd7seg:seg1.led[6]
+dis7s0[0] << bcd7seg:seg0.led[0]
+dis7s0[1] << bcd7seg:seg0.led[1]
+dis7s0[2] << bcd7seg:seg0.led[2]
+dis7s0[3] << bcd7seg:seg0.led[3]
+dis7s0[4] << bcd7seg:seg0.led[4]
+dis7s0[5] << bcd7seg:seg0.led[5]
+dis7s0[6] << bcd7seg:seg0.led[6]
+
+
+|minutero|Clk1Hz:divFre
+clkl => led~reg0.CLK
+clkl => conteo[0].CLK
+clkl => conteo[1].CLK
+clkl => conteo[2].CLK
+clkl => conteo[3].CLK
+clkl => conteo[4].CLK
+clkl => conteo[5].CLK
+clkl => conteo[6].CLK
+clkl => conteo[7].CLK
+clkl => conteo[8].CLK
+clkl => conteo[9].CLK
+clkl => conteo[10].CLK
+clkl => conteo[11].CLK
+clkl => conteo[12].CLK
+clkl => conteo[13].CLK
+clkl => conteo[14].CLK
+clkl => conteo[15].CLK
+clkl => conteo[16].CLK
+clkl => conteo[17].CLK
+clkl => conteo[18].CLK
+clkl => conteo[19].CLK
+clkl => conteo[20].CLK
+clkl => conteo[21].CLK
+clkl => conteo[22].CLK
+clkl => conteo[23].CLK
+clkl => conteo[24].CLK
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|minutero|count0to9:cont0
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+clk => present_state[3].CLK
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+cont[0] <= present_state[0].DB_MAX_OUTPUT_PORT_TYPE
+cont[1] <= present_state[1].DB_MAX_OUTPUT_PORT_TYPE
+cont[2] <= present_state[2].DB_MAX_OUTPUT_PORT_TYPE
+cont[3] <= present_state[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|minutero|count0to9:cont1
+clk => present_state[0].CLK
+clk => present_state[1].CLK
+clk => present_state[2].CLK
+clk => present_state[3].CLK
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+reset => present_state.OUTPUTSELECT
+cont[0] <= present_state[0].DB_MAX_OUTPUT_PORT_TYPE
+cont[1] <= present_state[1].DB_MAX_OUTPUT_PORT_TYPE
+cont[2] <= present_state[2].DB_MAX_OUTPUT_PORT_TYPE
+cont[3] <= present_state[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|minutero|bcd7seg:seg0
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+led[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|minutero|bcd7seg:seg1
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+led[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

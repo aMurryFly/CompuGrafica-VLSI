@@ -1,0 +1,48 @@
+|sum_res
+a[0] => sum:u2.a[0]
+a[1] => sum:u2.a[1]
+a[2] => sum:u2.a[2]
+b[0] => mux4x1:u1.b[0]
+b[1] => mux4x1:u1.b[1]
+b[2] => mux4x1:u1.b[2]
+s0[0] => mux4x1:u1.s[0]
+s0[1] => mux4x1:u1.s[1]
+cin => sum:u2.cin
+salsum[0] << sum:u2.salsum[0]
+salsum[1] << sum:u2.salsum[1]
+salsum[2] << sum:u2.salsum[2]
+cout << sum:u2.cout
+
+
+|sum_res|mux4x1:u1
+b[0] => Mux2.IN3
+b[0] => Mux2.IN2
+b[1] => Mux1.IN3
+b[1] => Mux1.IN2
+b[2] => Mux0.IN3
+b[2] => Mux0.IN2
+s[0] => Mux0.IN5
+s[0] => Mux1.IN5
+s[0] => Mux2.IN5
+s[1] => Mux0.IN4
+s[1] => Mux1.IN4
+s[1] => Mux2.IN4
+sal[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sal[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sal[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sum_res|sum:u2
+a[0] => Add0.IN3
+a[1] => Add0.IN2
+a[2] => Add0.IN1
+b[0] => Add0.IN6
+b[1] => Add0.IN5
+b[2] => Add0.IN4
+cin => Add1.IN8
+salsum[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+

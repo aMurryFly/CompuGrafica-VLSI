@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SalMoore[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SalMoore[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SalMoore[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SalMoore[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dsp2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
