@@ -8,6 +8,8 @@
 
 ## Objetivos 
 
+
+
 1.  Desarrollar un nuevo controlador y generador de imagen para archivos cargados en memoria tipo miff
 2.  Emplear el puerto VGA para poder desplegar los datos cargados en archivos externos 
 3.  Emplear todo lo visto en Diseño VLSI para poder desarrollar un videojuego
